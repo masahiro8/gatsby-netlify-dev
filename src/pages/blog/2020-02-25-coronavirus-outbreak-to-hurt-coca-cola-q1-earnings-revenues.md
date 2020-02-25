@@ -8,6 +8,10 @@ featuredimage: /img/home-jumbotron.jpg
 tags:
   - '#coranavirus'
 ---
+![image](/img/blog-index.jpg "image")
+
+
+
 The coronavirus outbreak in China has not only disrupted trade in the country but has also impacted global trade of companies, either with manufacturing units or stores there.**The Coca-Cola Company**KO has updated investors on how the COVID-19 outbreak will likely impact its first-quarter 2020 results, following several companies revealing the estimated impacts of the current situation in China on their results.\
 \
 Given the outbreak in the country, the company has prioritized the health and safety of its associates, and is taking the possible precautionary measures to prevent further spread of the virus.\
