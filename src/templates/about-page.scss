@@ -1,0 +1,16 @@
+.about-page__section {
+  padding: 3rem 5rem;
+  outline-offset: 12px;
+
+  .about-page__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-page__content {
+    font-weight: 200;
+    margin: 40px 0;
+    box-sizing: inherit;
+  }
+}
