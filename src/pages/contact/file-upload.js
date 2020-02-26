@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import './fileUpload.scss'
 
 function encode(data) {
   const formData = new FormData()
@@ -43,10 +44,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>File Upload</h1>
+        <section className="file-upload__section">
+          <div className="file-upload__container">
+            <div className="file-upload__content">
+              <h1 className="file-upload__title">File Upload</h1>
               <form
                 name="file-upload"
                 method="post"
@@ -63,13 +64,13 @@ export default class Contact extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                <div className="file-upload__field">
+                  <label className="file-upload__label" htmlFor={'name'}>
                     Your name
                   </label>
-                  <div className="control">
+                  <div className="file-upload__control">
                     <input
-                      className="input"
+                      className="file-upload__input"
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -78,23 +79,23 @@ export default class Contact extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <div className="file">
-                    <label className="file-label">
+                <div className="file-upload__field">
+                  <div className="file-upload__file">
+                    <label className="file-upload__file-label">
                       <input
-                        className="file-input"
+                        className="file-upload__file-input"
                         type="file"
                         name="attachment"
                         onChange={this.handleAttachment}
                       />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
+                      <span className="file-upload__file-cta">
+                        <span className="file-upload__file-label">Choose a file…</span>
                       </span>
                     </label>
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div className="file-upload__field">
+                  <button className="file-upload__button" type="submit">
                     Send
                   </button>
                 </div>
