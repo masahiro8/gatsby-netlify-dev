@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import './contactForm.scss'
 
 function encode(data) {
   return Object.keys(data)
@@ -36,10 +37,10 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Contact</h1>
+        <section className="contactform"> 
+          <div className="contactform__bar">  
+            <div className="contactform__content">  
+              <h1 className='contactform__title'>Contact</h1>
               <form
                 name="contact"
                 method="post"
@@ -56,13 +57,13 @@ export default class Index extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                <div className="contactform__field">  
+                  <label className="contactform__label" htmlFor={'name'}>  
                     Your name
                   </label>
-                  <div className="control">
+                  <div className="contactform__control">  
                     <input
-                      className="input"
+                      className="contactform__input"  
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -71,13 +72,13 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'email'}>
+                <div className="contactform__field">   
+                  <label className="contactform__label" htmlFor={'email'}>  
                     Email
                   </label>
-                  <div className="control">
+                  <div className="contactform__control">  
                     <input
-                      className="input"
+                      className="contactform__input"
                       type={'email'}
                       name={'email'}
                       onChange={this.handleChange}
@@ -86,13 +87,13 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'message'}>
+                <div className="contactform__field">    
+                  <label className="contactform__label" htmlFor={'message'}>    {/* label */}
                     Message
                   </label>
-                  <div className="control">
+                  <div className="contactform__control">   
                     <textarea
-                      className="textarea"
+                      className="contactform__textarea"
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
@@ -100,8 +101,8 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div className="contactform__field">  
+                  <button className="contactform__button" type="submit">  {/* button is-link */}
                     Send
                   </button>
                 </div>
