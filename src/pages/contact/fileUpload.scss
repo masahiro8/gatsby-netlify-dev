@@ -1,0 +1,32 @@
+.file-upload__section{
+          padding: 10px;
+
+  .file-upload__title{
+          font-size: 30px;
+  }
+
+  .file-upload__field{
+          margin: 20px 0;
+
+    .file-upload__label{
+          font-size: 20px;     
+  }
+  }
+  .file-upload__input{
+          height: 45px;
+          width: 500px;
+          border-radius:5px;
+  }
+
+  .file-upload__button{
+          margin-top: 10px;
+          font-size: 1.4em;
+          font-weight: bold;
+          padding: 8px 15px;
+          background-color:#3273dc;
+          border-color:transparent;
+          color: #fff;
+          border-radius:5px;
+          
+  }
+}
