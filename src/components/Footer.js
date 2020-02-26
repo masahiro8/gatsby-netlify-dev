@@ -7,6 +7,8 @@ import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
+import CONTENTS_MENU from '../constants/TEXT'
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -25,23 +27,23 @@ const Footer = class extends React.Component {
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
-                      <Link to="/" className="navbar-item">
-                        Home
+                      <Link  className="navbar-item" to={`/${CONTENTS_MENU.HOME.path}`} >
+                      { CONTENTS_MENU.HOME.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
-                        About
+                      <Link className="navbar-item" to={`/${CONTENTS_MENU.ABOUT.path}`}>
+                      { CONTENTS_MENU.ABOUT.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
+                      <Link className="navbar-item" to={`/${CONTENTS_MENU.PRODUCTS.path}`}>
+                      { CONTENTS_MENU.PRODUCTS.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
+                      <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT_EXAMPLES.path}`}>
+                       { CONTENTS_MENU.CONTACT_EXAMPLES.texts.ja }
                       </Link>
                     </li>
                     <li>
@@ -60,14 +62,15 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section>
                   <ul className="menu-list">
+                    {/* latest storiseはblogと同じ */}
                     <li>
-                      <Link className="navbar-item" to="/blog">
+                      <Link className="navbar-item" to={`/${CONTENTS_MENU.BLOG.path}`}>
                         Latest Stories
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
+                      <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT.path}`}>
+                      { CONTENTS_MENU.CONTACT.texts.ja }
                       </Link>
                     </li>
                   </ul>

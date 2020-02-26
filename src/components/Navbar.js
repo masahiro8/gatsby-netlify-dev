@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
+import CONTENTS_MENU from '../constants/TEXT'
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -60,20 +62,20 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+              <Link className="navbar-item" to={`/${CONTENTS_MENU.ABOUT.path}`}>
+              { CONTENTS_MENU.ABOUT.texts.ja }
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to={`/${CONTENTS_MENU.PRODUCTS.path}`}>
+              { CONTENTS_MENU.PRODUCTS.texts.ja }
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
+              <Link className="navbar-item" to={`/${CONTENTS_MENU.BLOG.path}`}>
+              { CONTENTS_MENU.BLOG.texts.ja }
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+              <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT.path}`}>
+              { CONTENTS_MENU.CONTACT.texts.ja }
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT_EXAMPLES.path}`}>
+              { CONTENTS_MENU.CONTACT_EXAMPLES.texts.ja }
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
