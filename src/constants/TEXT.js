@@ -4,6 +4,7 @@ const  CONTENTS_MENU = {
           PRODUCTS:{ path: 'products', texts: { ja: '製品', en: 'Products' } },
           CONTACT:{ path: 'contact', texts: { ja: 'お問い合わせ', en: 'Form' } },
           CONTACT_EXAMPLES:{ path: 'contact/examples', texts: { ja: 'フォーム例', en: 'Form　example' } },
+          CONTACT_FILEUPLOAD:{ path: 'contact/file-upload/', texts: { ja: 'ファイルアップロード', en: 'file upload '} },
           ADMIN:{ path: 'admin', texts: { ja: '管理者', en: 'admin' } },   
           BLOG:{path:'blog',texts:{ja:'ブログ',en:'blog'}} ,      
         }
