@@ -1,0 +1,15 @@
+.product-page__content {
+  margin-top: 0;
+
+  .product-page__image--container {
+    background-image: url("/static/img/jumbotron.jpg");
+    background-size: cover;
+  }
+
+  .product-page__image {
+    box-shadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40";
+    background-color: "#f40";
+    color: "white";
+    padding: "1rem";
+  }
+}
