@@ -3,8 +3,14 @@
 }
 
 .product-page__content .product-page__topimage {
-  width: 100%;
+  background-image: url(/img/blog-index.jpg);
+  margin-top: 0;
+  width: 100vw;
   height: 400px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 2em -50vw;
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -12,15 +18,12 @@
   align-items: center;
 }
 
-.product-page__content .product-page__image--title {
-  font-size: 40px;
+.product-page__content .product-page__topimage .product-page__image--title {
+  box-shadow: #ff4400 0.5rem 0px 0px, #ff4400 -0.5rem 0px 0px;
+  background-color: #ff4400;
   color: white;
-  background-color: #f40;
   padding: 1rem;
-  box-shadow: 0.5rem 0 0 #f40, -0.5rem 0 0 #f40;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  font-size: 30px;
 }
 
 .product-page__content .product-page__section {
