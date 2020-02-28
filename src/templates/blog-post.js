@@ -21,8 +21,8 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div className="blog-post-page__container--content">
         <div className="blog-post-page__columns">
-          <div className="blog-post-page__column">  {/* is-10 is-offset-1 */}
-            <h1 className="blog-post-page__title"> {/* is-size-2 has-text-weight-bold is-bold-light */}
+          <div className="blog-post-page__column"> 
+            <h1 className="blog-post-page__title">
               {title}
             </h1>
             <p className="blog-post-page__description">{description}</p>

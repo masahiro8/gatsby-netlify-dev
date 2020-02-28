@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 import './blog-page.scss'
-
+//blogトップページ
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
@@ -14,15 +14,7 @@ export default class BlogIndexPage extends React.Component {
             backgroundImage: `url('/img/blog-index.jpg')`,
           }}
         >
-                    <h1
-            className="blog-page__title"
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
-          >
+        <h1 className="blog-page__title">
             Latest Stories
           </h1>
         </div>
