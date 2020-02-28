@@ -1,32 +1,16 @@
-<<<<<<< HEAD
-.about-page__section{
-          padding: 30px;
-
-
-  .about-page__title{
-            font-size: 2rem;
-            font-weight: 600;
-  }
-  .about-page__content{
-          font-size: 1.5rem;
-          font-weight: 200;
-  }
-}
-=======
 .about-page__section {
-  padding: 3rem 5rem;
-  outline-offset: 12px;
-
-  .about-page__title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-page__content {
-    font-weight: 200;
-    margin: 40px 0;
-    box-sizing: inherit;
-  }
-}
->>>>>>> 5c8e685925726979164271ae0a2eda445220b3b3
+        padding: 3rem 5rem;
+        outline-offset: 12px;
+      
+        .about-page__title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+        }
+      
+        .about-page__content {
+          font-weight: 200;
+          margin: 40px 0;
+          box-sizing: inherit;
+        }
+      }

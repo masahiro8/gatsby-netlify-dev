@@ -1,0 +1,166 @@
+.home-page__content{
+
+  .home-page__full-width-image{
+    margin-top:0;
+    background-image: url(/static/534958a…/097fa/home-jumbotron.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    height: 400px;
+ // width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .home-page__topimage-title-container{
+      display: flex;
+      height: 150px;
+      line-height:  1;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;   
+      
+      .home-page__topimage-main-title{
+        box-shadow: rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px;
+        background-color: rgb(255, 68, 0);
+        color: white;
+        line-height: 1px;
+        padding: 0.25em; 
+        align-items: center;  
+        font-size: 40px;
+        height: 50px;     
+        padding-top: 20px;
+      }
+
+      .home-page__topimage-sub-title{
+        box-shadow:rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px;
+        background-color: rgb(255, 68, 0);
+        color: white;
+        line-height:  1px;
+        padding: 0.25em;      
+        align-items: center;  
+        font-size: 30px;     
+        height: 40px;
+        padding-top: 17px;
+
+      }
+    }
+  }
+.home-page__section--container{
+  padding: 3rem 1.5rem;
+
+  .home-page__container{
+    max-width: 960px;
+
+    .home-page__section{
+      padding: 3rem 1.5rem;
+
+     .home-page__columns{
+      display: flex;
+
+      .home-page__column{
+        flex: none;
+        width: 100%;
+
+        .home-page__content{
+          box-sizing: inherit;
+        
+        .home-page__main-content{
+          margin-bottom: 1.5rem;
+
+          .home-page__main-title-continer{
+            display: flex;
+
+            .home-page__main-title{
+              font-size: 2em;
+              margin-bottom: .5em;
+            }
+          }
+
+        .home-page__tile{
+          display: flex;
+
+          .home-page__subtitle{
+            font-size: 1.5em;
+            margin-bottom: .6666em;
+          }
+        }
+
+        .home-page__columns{
+          display: flex;
+
+          .home-page__column{
+            flex: none;
+            width: 100%;
+            .home-page__heading{
+              margin-bottom: .6666em;
+            }           
+            }
+            .home-page__description{
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        }
+        }
+
+      }
+     }
+
+    .home-page__columns-product{
+      display: flex;
+     .home-page__column-product-btn{
+      flex: none;
+      width: 100%;
+      text-align: center;
+       .home-page__product-btn{
+        display: inline-block;
+        padding: 12px 16px 10px;
+        font-size: 1rem;
+        line-height: 1.25;
+        background-color: #fff;
+        border-radius: .25rem;
+        text-decoration: none;
+        font-weight: 700;
+        color: #cc3700;
+        text-align: center;
+        box-shadow: inset 0 0 0 2px #f40;
+       }
+     }
+      }
+      .home-page__column-blog{
+
+        
+        .home-page__column-blog-title{
+          font-size: 30px;
+          margin: 10px;
+        }
+      .home-page__column-readmore{
+        flex: none;
+        width: 100%;
+        text-align: center;
+        .home-page__column-readmore-btn{
+          display: inline-block;
+          padding: 12px 16px 10px;
+          font-size: 1rem;
+          line-height: 1.25;
+          background-color: #fff;
+          border-radius: .25rem;
+          text-decoration: none;
+          font-weight: 700;
+          color: #cc3700;
+          text-align: center;
+          box-shadow: inset 0 0 0 2px #f40;
+        }
+      }
+      }
+     }
+    }
+    }
+
+
+
+
