@@ -1,0 +1,46 @@
+.navbar__content {
+  .navbar {
+    position: relative;
+
+    .navbar__container {
+      display: block;
+
+      .navbar__navbar-brand {
+        align-items: center;
+        display: flex;
+        .navbar__navbar-item {
+          padding-left: 20px;
+          padding-top: 10px;
+          height: 50px;
+          width: 100px;
+        }
+        .navbar__navmenue-container {
+          margin-left: auto;
+        }
+      }
+
+      .navbar__navMenu {
+        display: block;
+        padding: 30px;
+
+        .navbar__navbar-start {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          .navbar__navbar-item {
+            cursor: pointer;
+            padding-bottom: 10px;
+            text-decoration: none;
+            color: black;
+            // display: flex;
+          }
+          .navbar__navbar-image-github {
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
