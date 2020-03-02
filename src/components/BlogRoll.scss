@@ -1,0 +1,40 @@
+.blog-roll__columns{
+  display: flex;
+  flex-wrap: wrap;
+
+  .blog-roll__is-parent--column{
+    flex: none;
+    width: 50%;
+    padding: 20px;
+  }
+  .blog-roll__featured-thumbnail{
+    flex-basis: 35%;
+    margin: 0 1.5em 0 0;    
+  }
+  .blog-roll__post-meta{
+    margin: 0;
+
+    .blog-roll__title{
+      text-decoration: underline;
+      color: #D64000;
+      font-size: 20px;
+    }
+  }
+  
+  .blog-roll__post-excerpt{
+    margin: 0;
+
+    .blog-roll__button{
+      background-color: #fff;
+      border-color: #dbdbdb;
+      border-width: 1px;
+      color: #363636;
+      cursor: pointer;
+      justify-content: center;
+      padding: calc(.5em - 1px) 1em;
+      text-align: center;
+      white-space: nowrap;      
+    }
+  }
+
+}

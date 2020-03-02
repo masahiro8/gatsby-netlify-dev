@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import './BlogRoll.scss'
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,10 +10,10 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="blog-roll__columns">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="blog-roll__is-parent--column" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -20,7 +21,7 @@ class BlogRoll extends React.Component {
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="blog-roll__featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -29,24 +30,24 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <p className="blog-roll__post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="blog-roll__title"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="blog-roll__subtitle">
                       {post.frontmatter.date}
                     </span>
                   </p>
                 </header>
-                <p>
+                <p className="blog-roll__post-excerpt">
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="blog-roll__button" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>
