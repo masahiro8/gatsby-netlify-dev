@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 
-import CONTENTS_MENU from "../constants/TEXT";
+import CONTENTS_MENU from "../../constants/TEXT";
 import "./Navbar.scss";
 
 const Navbar = class extends React.Component {

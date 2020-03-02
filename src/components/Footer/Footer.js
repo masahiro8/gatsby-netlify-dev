@@ -7,7 +7,7 @@ import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
-import CONTENTS_MENU from '../constants/TEXT'
+import CONTENTS_MENU from '../../constants/TEXT'
 import './Footer.scss'
 
 const Footer = class extends React.Component {
