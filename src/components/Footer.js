@@ -8,47 +8,48 @@ import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
 import CONTENTS_MENU from '../constants/TEXT'
+import './Footer.scss'
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+      <footer className="footer__main-container">
+        <div className="footer__image-content">
           <img
+            className='footer__image-kaldi'
             src={logo}
             alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
           />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
+        <div className="footer__content">
+          <div className="footer__container">
+            <div className="footer__columns">
+              <div className="footer__column">
+                <section className="footer__menu">
+                  <ul className="footer__menu-list">
                     <li>
-                      <Link  className="navbar-item" to={`/${CONTENTS_MENU.HOME.path}`} >
+                      <Link  className="footer__navbar-item" to={`/${CONTENTS_MENU.HOME.path}`} >
                       { CONTENTS_MENU.HOME.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${CONTENTS_MENU.ABOUT.path}`}>
+                      <Link className="footer__navbar-item" to={`/${CONTENTS_MENU.ABOUT.path}`}>
                       { CONTENTS_MENU.ABOUT.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${CONTENTS_MENU.PRODUCTS.path}`}>
+                      <Link className="footer__navbar-item" to={`/${CONTENTS_MENU.PRODUCTS.path}`}>
                       { CONTENTS_MENU.PRODUCTS.texts.ja }
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT_EXAMPLES.path}`}>
+                      <Link className="footer__navbar-item" to={`/${CONTENTS_MENU.CONTACT_EXAMPLES.path}`}>
                        { CONTENTS_MENU.CONTACT_EXAMPLES.texts.ja }
                       </Link>
                     </li>
                     <li>
                       <a
-                        className="navbar-item"
+                        className="footer__navbar-item"
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -59,26 +60,27 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4">
+              <div className="footer__sub-column">
                 <section>
-                  <ul className="menu-list">
+                  <ul className="footer__sub-menu-list">
                     {/* latest storiseはblogと同じ */}
-                    <li>
-                      <Link className="navbar-item" to={`/${CONTENTS_MENU.BLOG.path}`}>
+                    <li className='footer__sub-menu-item'>
+                      <Link className="footer__sub-navbar-item" to={`/${CONTENTS_MENU.BLOG.path}`}>
                         Latest Stories
                       </Link>
                     </li>
-                    <li>
-                      <Link className="navbar-item" to={`/${CONTENTS_MENU.CONTACT.path}`}>
+                    <li className='footer__sub-menu-item'>
+                      <Link className="footer__sub-navbar-item" to={`/${CONTENTS_MENU.CONTACT.path}`}>
                       { CONTENTS_MENU.CONTACT.texts.ja }
                       </Link>
                     </li>
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
+              <div className="footer__sns-column is-4 social">
                 <a title="facebook" href="https://facebook.com">
                   <img
+                  className="footer__sns-facebook"
                     src={facebook}
                     alt="Facebook"
                     style={{ width: '1em', height: '1em' }}
@@ -86,7 +88,7 @@ const Footer = class extends React.Component {
                 </a>
                 <a title="twitter" href="https://twitter.com">
                   <img
-                    className="fas fa-lg"
+                    className="footer__sns-twitter"
                     src={twitter}
                     alt="Twitter"
                     style={{ width: '1em', height: '1em' }}
@@ -94,6 +96,7 @@ const Footer = class extends React.Component {
                 </a>
                 <a title="instagram" href="https://instagram.com">
                   <img
+                  className="footer__sns-instagram"
                     src={instagram}
                     alt="Instagram"
                     style={{ width: '1em', height: '1em' }}
@@ -101,6 +104,7 @@ const Footer = class extends React.Component {
                 </a>
                 <a title="vimeo" href="https://vimeo.com">
                   <img
+                  className="footer__sns-vimeo"
                     src={vimeo}
                     alt="Vimeo"
                     style={{ width: '1em', height: '1em' }}
