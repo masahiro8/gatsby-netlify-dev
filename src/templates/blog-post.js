@@ -17,20 +17,18 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="blog-post-page__section">
-      {helmet || ''}
-      <div className="blog-post-page__container-content">
-        <div className="blog-post-page__columns">
-          <div className="blog-post-page__column"> 
-            <h1 className="blog-post-page__title">
-              {title}
-            </h1>
-            <p className="blog-post-page__description">{description}</p>
+    <section className="blog-post__section">
+      {helmet || ""}
+      <div className="blog-post__container-content">
+        <div className="blog-post__columns">
+          <div className="blog-post__column">
+            <h1 className="blog-post__title">{title}</h1>
+            <p className="blog-post__description">{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4 className="blog-post-page__tags">Tags</h4>
-                <ul className="blog-post-page__taglist">
+              <div className="blog-post__tags-container">
+                <h4 className="blog-post__tags">Tags</h4>
+                <ul className="blog-post__taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
@@ -43,8 +41,8 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
