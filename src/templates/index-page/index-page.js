@@ -61,19 +61,19 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="home-page__columns-product">
                   <div className="home-page__column-product-btn">
-                    <Link className="home-page__product-btn" to="/products">
-                      See all products
+                    <Link className="home-page__product-btn" to={`/${CONTENTS_MENU.PRODUCTS.path}`}>
+                    { CONTENTS_MENU.PRODUCTS.texts.ja }
                     </Link>
                   </div>
                 </div>
                 <div className="home-page__column-blog">
-                  <h3 className="home-page__column-blog-title">
-                    Latest stories
-                  </h3>
+                  <Link className="home-page__column-blog-title"　to={`/${CONTENTS_MENU.BLOG.path}`}>
+                    最新の記事
+                  </Link>
                   <BlogRoll />
                   <div className="home-page__column-readmore">
-                    <Link className="home-page__column-readmore-btn" to="/blog">
-                      Read more
+                    <Link className="home-page__column-readmore-btn" to={`/${CONTENTS_MENU.BLOG.path}`}>
+                      もっと読む
                     </Link>
                   </div>
                 </div>

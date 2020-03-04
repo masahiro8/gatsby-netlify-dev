@@ -1,7 +1,7 @@
 const  CONTENTS_MENU = {
           HOME:{ path: '', texts: { ja: 'ホーム', en: 'Home' } },
           ABOUT:{ path: 'about', texts: { ja: 'サイトについて', en: 'About' } },
-          PRODUCTS:{ path: 'products', texts: { ja: '製品', en: 'Products' } },
+          PRODUCTS:{ path: 'products', texts: { ja: '製品について', en: 'Products' } },
           CONTACT:{ path: 'contact/index', texts: { ja: 'お問い合わせ', en: 'Form' } },
           CONTACT_EXAMPLES:{ path: 'contact/examples/examples', texts: { ja: 'フォーム例', en: 'Form　example' } },
           CONTACT_FILEUPLOAD:{ path: 'contact/file-upload/file-upload/', texts: { ja: 'ファイルアップロード', en: 'file upload '} },
