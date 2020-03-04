@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Layout from '../../components/Layout'
+import Layout from '../../../components/Layout/Layout'
 import './contact_examples.scss'
-import CONTENTS_MENU from '../../constants/TEXT';
+import CONTENTS_MENU from '../../../constants/TEXT';
 
 export default class Index extends React.Component {
   render() {

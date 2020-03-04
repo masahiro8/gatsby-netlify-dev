@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import Layout from '../../components/Layout/Layout'
+import BlogRoll from '../../components/BlogRoll/BlogRoll'
 import './blog-page.scss'
 //blogトップページ
 export default class BlogIndexPage extends React.Component {
