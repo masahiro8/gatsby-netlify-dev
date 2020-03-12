@@ -23,7 +23,8 @@ const CONTENTS_MENU = {
       en3: "read more"
     }
   },
-  KEEP_READING: { texts: { ja: "続きを読む →", en: "keep reading →" } }
+  KEEP_READING: { texts: { ja: "続きを読む →", en: "keep reading →" } },
+  BLOGS: { path: "blogs/blogs", texts: { ja: "ブログ２", en: "ブログ２" } },
 };
 
 export default CONTENTS_MENU;

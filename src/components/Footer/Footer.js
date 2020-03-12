@@ -48,6 +48,11 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
+                      <Link className="footer__navbar-item" to={`/${CONTENTS_MENU.BLOGS.path}`} >
+                      { CONTENTS_MENU.BLOGS.texts.ja }
+                      </Link>
+                    </li>
+                    <li>
                       <a
                         className="footer__navbar-item"
                         href="/admin/"

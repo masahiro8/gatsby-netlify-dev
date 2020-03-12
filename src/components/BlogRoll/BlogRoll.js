@@ -21,7 +21,7 @@ class BlogRoll extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                  {/* {post.frontmatter.featuredimage ? (
                     <div className="blog-roll__featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -30,7 +30,7 @@ class BlogRoll extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null}
+                  ) : null} */}
                   <p className="blog-roll__post-meta">
                     <Link className="blog-roll__title" to={post.fields.slug}>
                       {post.frontmatter.title}
@@ -41,14 +41,9 @@ class BlogRoll extends React.Component {
                     </span>
                   </p>
                 </header>
-                <p className="blog-roll__post-excerpt">
-                  {post.excerpt}
-                  <br />
-                  <br />
                   <Link className="blog-roll__button" to={post.fields.slug}>
                     {CONTENTS_MENU.KEEP_READING.texts.ja}
                   </Link>
-                </p>
               </article>
             </div>
           ))}

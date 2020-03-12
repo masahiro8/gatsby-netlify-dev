@@ -90,6 +90,9 @@ const Navbar = class extends React.Component {
                   >
                     {CONTENTS_MENU.CONTACT_EXAMPLES.texts.ja}
                   </Link>
+                  <Link className="footer__navbar-item" to={`/${CONTENTS_MENU.BLOGS.path}`} >
+                    { CONTENTS_MENU.BLOGS.texts.ja }
+                  </Link>                 
                   <a
                     className="navbar__navbar-item"
                     href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
