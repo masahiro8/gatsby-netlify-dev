@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "../PreviewCompatibleImage/PreviewCompatibleImage";
 import "./BlogRoll.scss";
+import CONTENTS_MENU from "../../constants/TEXT";
 
 class BlogRoll extends React.Component {
   render() {
@@ -45,7 +46,7 @@ class BlogRoll extends React.Component {
                   <br />
                   <br />
                   <Link className="blog-roll__button" to={post.fields.slug}>
-                    Keep Reading →
+                    {CONTENTS_MENU.KEEP_READING.texts.ja}
                   </Link>
                 </p>
               </article>

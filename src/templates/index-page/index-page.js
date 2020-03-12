@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../../components/Layout/Layout'
-import Features from '../../components/Features/Features'
-import BlogRoll from '../../components/BlogRoll/BlogRoll'
-import './index.scss'
-
+import Layout from "../../components/Layout/Layout";
+import Features from "../../components/Features/Features";
+import BlogRoll from "../../components/BlogRoll/BlogRoll";
+import "./index.scss";
+import CONTENTS_MENU from "../../constants/TEXT";
 export const IndexPageTemplate = ({
   image,
   title,
@@ -14,9 +14,9 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
-  intro,
+  intro
 }) => (
-  <div className='home-page__content'>
+  <div className="home-page__content">
     <div
       className="home-page__full-width-image"
       style={{
@@ -24,16 +24,12 @@ export const IndexPageTemplate = ({
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        backgroundAttachment: `fixed`
       }}
     >
-      <div className='home-page__topimage-title-container'>
-        <h1 className="home-page__topimage-main-title" >
-          {title}
-        </h1>
-        <h3 className="home-page__topimage-sub-title" >
-          {subheading}
-        </h3>
+      <div className="home-page__topimage-title-container">
+        <h1 className="home-page__topimage-main-title">{title}</h1>
+        <h3 className="home-page__topimage-sub-title">{subheading}</h3>
       </div>
     </div>
     <section className="home-page__section--container">
@@ -47,33 +43,42 @@ export const IndexPageTemplate = ({
                     <h1 className="home-page__main-title">{mainpitch.title}</h1>
                   </div>
                   <div className="home-page__tile">
-                    <h3 className="home-page__subtitle">{mainpitch.description}</h3>
+                    <h3 className="home-page__subtitle">
+                      {mainpitch.description}
+                    </h3>
                   </div>
                 </div>
                 <div className="home-page__columns">
                   <div className="home-page__column">
-                    <h3 className="home-page__heading">
-                      {heading}
-                    </h3>
+                    <h3 className="home-page__heading">{heading}</h3>
                     <p className="home-page__description">{description}</p>
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
                 <div className="home-page__columns-product">
                   <div className="home-page__column-product-btn">
-                    <Link className="home-page__product-btn" to="/products">
-                      See all products
+                    <Link
+                      className="home-page__product-btn"
+                      to={`/${CONTENTS_MENU.PRODUCTS.path}`}
+                    >
+                      {CONTENTS_MENU.PRODUCTS.texts.ja}
                     </Link>
                   </div>
                 </div>
                 <div className="home-page__column-blog">
-                  <h3 className="home-page__column-blog-title">
-                    Latest stories
-                  </h3>
+                  <Link
+                    className="home-page__column-blog-title"
+                    to={`/${CONTENTS_MENU.BLOG.path}`}
+                  >
+                    {CONTENTS_MENU.BLOG.texts.ja2}
+                  </Link>
                   <BlogRoll />
                   <div className="home-page__column-readmore">
-                    <Link className="home-page__column-readmore-btn" to="/blog">
-                      Read more
+                    <Link
+                      className="home-page__column-readmore-btn"
+                      to={`/${CONTENTS_MENU.BLOG.path}`}
+                    >
+                      {CONTENTS_MENU.BLOG.texts.ja3}
                     </Link>
                   </div>
                 </div>
@@ -84,7 +89,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -94,12 +99,12 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
+    blurbs: PropTypes.array
+  })
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -113,18 +118,18 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -162,5 +167,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-
+`;
