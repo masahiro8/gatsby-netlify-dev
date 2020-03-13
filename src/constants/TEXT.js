@@ -24,7 +24,7 @@ const CONTENTS_MENU = {
     }
   },
   KEEP_READING: { texts: { ja: "続きを読む →", en: "keep reading →" } },
-  BLOGS: { path: "blogs/blogs", texts: { ja: "ブログ２", en: "ブログ２" } },
+  BLOGS: { path: "blogs", texts: { ja: "ブログ２", en: "blog２" } },
 };
 
 export default CONTENTS_MENU;

@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
 import Features from "../../components/Features/Features";
 import BlogRoll from "../../components/BlogRoll/BlogRoll";
+import BlogsRoll from '../../components/BlogsRoll/BlogsRoll'
 import "./index.scss";
 import CONTENTS_MENU from "../../constants/TEXT";
 export const IndexPageTemplate = ({
@@ -80,6 +81,7 @@ export const IndexPageTemplate = ({
                     >
                       {CONTENTS_MENU.BLOG.texts.ja3}
                     </Link>
+                    <BlogsRoll />
                   </div>
                 </div>
               </div>

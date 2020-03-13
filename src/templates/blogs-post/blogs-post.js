@@ -63,7 +63,7 @@ const BlogsPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Blogs">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -87,12 +87,12 @@ BlogsPost.propTypes = {
 export default BlogsPost;
 
 export const pageQuery = graphql`
-  query blogPostByIdAndBlogPostById($id: String!) {
+  query BlogsPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM月 DD日, YYYY年")
         title
         description
         tags

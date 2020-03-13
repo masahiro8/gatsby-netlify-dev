@@ -1,10 +1,10 @@
 import React from "react";
 
-import Layout from "../../components/Layout/Layout";
-import BlogsRoll from "../../components/BlogRoll/BlogRoll";
+import Layout from "../components/Layout/Layout";
+import BlogsRoll from '../components/BlogsRoll/BlogsRoll'
 // import "./blog-page.scss";
 //blog_secondトップページ
-export default class Blogs extends React.Component {
+export default class BlogsIndexPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -18,3 +18,4 @@ export default class Blogs extends React.Component {
     );
   }
 }
+
