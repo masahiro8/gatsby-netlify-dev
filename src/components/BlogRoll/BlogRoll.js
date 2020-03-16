@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "../PreviewCompatibleImage/PreviewCompatibleImage";
+// import PreviewCompatibleImage from "../PreviewCompatibleImage/PreviewCompatibleImage";
 import "./BlogRoll.scss";
 import CONTENTS_MENU from "../../constants/TEXT";
 
@@ -21,7 +21,7 @@ class BlogRoll extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                  {/* {post.frontmatter.featuredimage ? (
                     <div className="blog-roll__featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -30,7 +30,7 @@ class BlogRoll extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null}
+                  ) : null} */}
                   <p className="blog-roll__post-meta">
                     <Link className="blog-roll__title" to={post.fields.slug}>
                       {post.frontmatter.title}
