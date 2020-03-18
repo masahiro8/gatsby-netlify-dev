@@ -7,6 +7,11 @@ import Features from "../../components/Features/Features";
 import BlogRoll from "../../components/BlogRoll/BlogRoll";
 import "./index.scss";
 import CONTENTS_MENU from "../../constants/TEXT";
+// import TagRoute from '../tags/tags';
+import TagsPage from '../../pages/tags/index'
+// import tagPageQuery from '../../pages/tags/index'
+// import ReactComponent from '../../pages/tags/index'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -38,6 +43,9 @@ export const IndexPageTemplate = ({
           <div className="home-page__columns">
             <div className="home-page__column">
               <div className="home-page__content">
+              <TagsPage  />
+                {/* <tagPageQuery query={} /> */}
+                {/* <ReactComponent /> */}
                 <div className="home-page__main-content">
                   <div className="home-page__main-title-continer">
                     <h1 className="home-page__main-title">{mainpitch.title}</h1>

@@ -27,8 +27,8 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "blog2"
-    label: "Blog2"
+  - name: "home"
+    label: "home"
     folder: "src/pages/blog2"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

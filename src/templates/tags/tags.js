@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout/Layout'
 
+//tags詳細page
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -33,6 +35,7 @@ class TagRoute extends React.Component {
                 <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
                 <ul className="taglist">{postLinks}</ul>
                 <p>
+                  <h1>tagsの詳細ページだよ〜</h1>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>
               </div>
