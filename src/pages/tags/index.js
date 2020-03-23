@@ -3,18 +3,35 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import {  Link,graphql, StaticQuery } from 'gatsby'
 import Layout from '../../components/Layout/Layout'
+import './tags.scss'
 // import PropTypes from "prop-types"
 
 //tagspagetop
 
 
-const TagsPage =({data}) =>(
-  <div>
-    <p>TAG TOP PAGE DAYO</p>
-    <h1>{data.site.siteMetadata.title}</h1>
-    <h1>{data.site.siteMetadata.description}</h1>
-
+const TagsPage =({  data: {
+  allMarkdownRemark: { group },
+  site: {
+    siteMetadata: { title },
+  },
+},
+}) =>(
+  <Layout>
+  <div className='tags_container'>
+  <p className='tags_title'>Tags</p>
+    <Helmet title={`Tags | ${title}`} />
+    <ul className="tags_taglist">
+      {group.map(tag => (
+      <li className='tags_tags' key={tag.fieldValue}>
+        <Link classname='tags_tag' to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          {tag.fieldValue} ({tag.totalCount})
+        </Link>
+      </li>
+       ))}
+    </ul>
   </div>
+  </Layout>
+  
 )
 
 
@@ -42,60 +59,6 @@ export default () => (
 )
 
 
-
-
-// const TagsPage = ({data}) =>(
-//   <div>
-//     <p>TAGS TOP PAGE </p>
-//       <h1>{data.site.siteMetadata.title}</h1>
-//       <h2>{data.site.siteMetadata.description}</h2>
-//       {/* <p>{data.allMarkdownRemark.group}</p> */}
-//           {/* <ul className="taglist">
-//              {group.map(tag => (
-//                <li key={tag.fieldValue}>
-//                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-//                    {tag.fieldValue} ({tag.totalCount})
-//                  </Link>
-//                </li>
-//              ))}
-//           </ul> */}
-//   </div>
-// )
-
-// export const props = (
-//   <StaticQuery 
-//   query = {graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//       }
-//     }
-//     allMarkdownRemark(limit: 1000) {
-//        group(field: frontmatter___tags) {
-//          fieldValue
-//          totalCount
-//        }
-//      }
-//   }
-// `}
-// render={data => ( <TagsPage data={data} {...props} />)}
-//   />
-// );
-
-//propsはコンポーネント作成時に値を指定することで
-//コンポーネントで表示させたいデータを指定できます
-
-// TagsPage.propstypes = {
-//   data:PropTypes.shape({
-//     site:PropTypes.shape({
-//       siteMetadata:PropTypes.shape({
-//         title:PropTypes.string.isRequired,
-//       }).isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// }
 
 
 
