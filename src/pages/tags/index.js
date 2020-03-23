@@ -16,7 +16,6 @@ const TagsPage =({  data: {
   },
 },
 }) =>(
-  <Layout>
   <div className='tags_container'>
   <p className='tags_title'>Tags</p>
     <Helmet title={`Tags | ${title}`} />
@@ -30,7 +29,6 @@ const TagsPage =({  data: {
        ))}
     </ul>
   </div>
-  </Layout>
   
 )
 
