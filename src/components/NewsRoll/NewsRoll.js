@@ -2,27 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "../PreviewCompatibleImage/PreviewCompatibleImage";
-import "./BlogRoll.scss";
 import CONTENTS_MENU from "../../constants/TEXT";
-
-class BlogRoll extends React.Component {
+import './NewsRoll.scss'
+class NewsRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="blog-roll__columns">
+      <div className="news-roll__columns">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="blog-roll__is-parent--column" key={post.id}>
+            <div className="news-roll__is-parent--column" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`news-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? "is-featured" : ""
                 }`}
               >
                 <header>
                   {/* {post.frontmatter.featuredimage ? (
-                    <div className="blog-roll__featured-thumbnail">
+                    <div className="news-roll__featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -31,21 +30,21 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null} */}
-                  <p className="blog-roll__post-meta">
-                    <Link className="blog-roll__title" to={post.fields.slug}>
+                  <p className="news-roll__post-meta">
+                    <Link className="news-roll__title" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="blog-roll__subtitle">
+                    <span className="news-roll__subtitle">
                       {post.frontmatter.date}
                     </span>
                   </p>
                 </header>
-                {/* <p className="blog-roll__post-excerpt">
+                {/* <p className="news-roll__post-excerpt">
                   {post.excerpt}
                   <br />
                   <br /> */}
-                  <Link className="blog-roll__button" to={post.fields.slug}>
+                  <Link className="news-roll__button" to={post.fields.slug}>
                     {CONTENTS_MENU.KEEP_READING.texts.ja}
                   </Link>
                 {/* </p> */}
@@ -57,7 +56,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+NewsRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array
@@ -68,10 +67,10 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query NewsRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "news-post" } } }
         ) {
           edges {
             node {
@@ -98,6 +97,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <NewsRoll data={data} count={count} />}
   />
 );
