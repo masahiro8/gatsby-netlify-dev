@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout/Layout";
 import Content, { HTMLContent } from "../../components/Content/Content";
+import './news-post.scss'
 
 export const NewsPostTemplate = ({
   content,

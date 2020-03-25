@@ -1,6 +1,7 @@
 import React from "react";
 import NewsRoll from '../../components/NewsRoll/NewsRoll'
 import Layout from "../../components/Layout/Layout";
+import './news-page.scss'
 //newトップページ
 export default class NewsIndexPage extends React.Component {
   render() {
