@@ -63,10 +63,14 @@ const Footer = class extends React.Component {
               <div className="footer__sub-column">
                 <section>
                   <ul className="footer__sub-menu-list">
-                    {/* latest storiseはblogと同じ */}
                     <li className='footer__sub-menu-item'>
                       <Link className="footer__sub-navbar-item" to={`/${CONTENTS_MENU.BLOG.path}`}>
-                        Latest Stories
+                      { CONTENTS_MENU.BLOG.texts.ja2 }
+                      </Link>
+                    </li>
+                    <li className='footer__sub-menu-item'>
+                      <Link className="footer__sub-navbar-item" to={`/${CONTENTS_MENU.NEWS.path}`}>
+                      { CONTENTS_MENU.NEWS.texts.ja }
                       </Link>
                     </li>
                     <li className='footer__sub-menu-item'>

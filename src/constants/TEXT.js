@@ -23,6 +23,7 @@ const CONTENTS_MENU = {
       en3: "read more"
     }
   },
+  NEWS:{path: "news", texts: { ja: "ニュース", en: "news" }},
   KEEP_READING: { texts: { ja: "続きを読む →", en: "keep reading →" } }
 };
 

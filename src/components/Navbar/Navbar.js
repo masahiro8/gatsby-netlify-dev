@@ -80,6 +80,12 @@ const Navbar = class extends React.Component {
                   </Link>
                   <Link
                     className="navbar__navbar-item"
+                    to={`/${CONTENTS_MENU.NEWS.path}`}
+                  >
+                    {CONTENTS_MENU.NEWS.texts.ja}
+                  </Link>
+                  <Link
+                    className="navbar__navbar-item"
                     to={`/${CONTENTS_MENU.CONTACT.path}`}
                   >
                     {CONTENTS_MENU.CONTACT.texts.ja}
