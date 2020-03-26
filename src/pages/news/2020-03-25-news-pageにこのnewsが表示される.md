@@ -1,7 +1,11 @@
 ---
+<<<<<<< Updated upstream
 
 templateKey: news-post
 
+=======
+templateKey: news-post
+>>>>>>> Stashed changes
 title: news pageにこのnewsが表示される
 date: 2020-03-25T06:27:19.260Z
 description: news pageにこのnewsが表示されるnews pageにこのnewsが表示されるnews pageにこのnewsが表示される
