@@ -7,6 +7,8 @@ import Features from "../../components/Features/Features";
 import BlogRoll from "../../components/BlogRoll/BlogRoll";
 import "./index.scss";
 import CONTENTS_MENU from "../../constants/TEXT";
+import TagsPage from '../../pages/tags/index'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -81,6 +83,7 @@ export const IndexPageTemplate = ({
                       {CONTENTS_MENU.BLOG.texts.ja3}
                     </Link>
                   </div>
+                  <TagsPage  />
                 </div>
               </div>
             </div>
